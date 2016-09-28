@@ -59,6 +59,7 @@ help_msg = ('''\
 !sparkles
 !spook
 !stirner
+!source
 !tankie
 !trotsky
 !trump
@@ -271,6 +272,10 @@ def on_message(message):
 
     elif message.content.startswith('!stirner'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmbbBdDbhoZhYfxTwc8FH41AQmLZtFFMDC6y7YexXrJhqh')
+
+    elif message.content.startswith('!source'):
+        yield from client.send_message(message.channel, 'https://github.com/subvertc/voltairine')
+
 
     elif message.content.startswith('!tankie'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmQUfTTAQwUWq2peYL1EzyNiDsskdXvCteEn73uoZtXinF')
