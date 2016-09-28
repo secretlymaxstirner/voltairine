@@ -9,11 +9,11 @@ client = discord.Client()
 insult1 = ["a Lazy", "a Stupid", " an Insecure", "an Idiotic", "a Slimy", "a Jerky", "a Smelly", "a Pompous", "a Communist", "a Dicknose", "a Pie-eating", "a Racist", "an Elitist", "a White Trash", "a Drug-Loving", "a Butterface", "a Tone Deaf", "an Ugly", "a Creepy"]
 insult2 = ["Douche", "Ass", "Turd", "Rectum", "Butt", "Cock", "Shit", "Crotch", "Fascist", "Prick", "Jerk", "Taint", "Fuck", "Dick", "Boner", "Shart", "Nut", "Sphincter" ]
 insult3 = ["Pilot", "Canoe", "Captain", "Pirate", "Hammer", "Knob", "Box", "Jockey", "Nazi", "Waffle", "Goblin", "Blossum", "Biscuit", "Clown", "Socket", "Monster", "Hound", "Dragon", "Balloon"]
+compliment1 = ["a Gentle", "a Inviting", " an Obliging", "a Pleasant", "a Delightful", "a Considerate", "a Attractive", "a Helpful", "a Commendable", "a Courteous", "a Well-mannered", "a Ducky", "a Copacetic", "a Simpatico", "a Swell", "a Pleasurable", "a Peachy", "a Polite", "a Lovely"]
+compliment2 = ["Gracious", "Civil", "Kindly", "Warm", "Sociable", "Approachable", "Breezy", "Congenial", "Dandy", "Marvelous", "Elegant", "Alluring", "Classy", "Fascinating", "Cute", "Dazzling", "Sublime", "Splendid" ]
+compliment3 = ["Pilot", "Canoe", "Captain", "Pirate", "Hammer", "Knob", "Box", "Jockey", "Nazi", "Waffle", "Goblin", "Blossum", "Biscuit", "Clown", "Socket", "Monster", "Hound", "Dragon", "Balloon"]
 help_msg = ('''\
 !help - Displays this message
-!insult - Generates a random insult
-!coin - Flips a coin
-!encounter - Fight a random monster
 !acab
 !anarchism
 !ancap
@@ -25,13 +25,17 @@ help_msg = ('''\
 !btfo
 !bubbles
 !coffee
+!coin - Flips a coin
+!compliment
 !cyberpunk
 !durruti
+!encounter - Fight a random monster
 !ezln
 !fresh
 !goldman
 !gulag
 !hacktheplanet
+!insult
 !kitty
 !kronstadt
 !kropotkin
@@ -292,6 +296,11 @@ def on_message(message):
         l = random.randint(0,18)
         yield from client.send_message(message.channel, '```You\'re ' + insult1[j] + ' ' + insult2[k] + ' ' + insult3[l] + '```')
 
+    elif message.content.startswith('!compliment'):
+        j = random.randint(0,18)
+        k = random.randint(0,17)
+        l = random.randint(0,18)
+        yield from client.send_message(message.channel, '```You\'re ' + compliment1[j] + ' ' + compliment2[k] + ' ' + compliment3[l] + '```')
 
     elif message.content.startswith('!coin'):
         j = random.randint(1,2)
