@@ -6,24 +6,63 @@ import random
 
 client = discord.Client()
 
+<<<<<<< HEAD
+@client.event
+async def on_member_join(member):
+    server = member.server
+    fmt = 'Welcome {0.mention} to {1.name}!'
+    await client.send_message(server, fmt.format(member, server))
+
+@client.event
+async def on_ready():
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+print('------')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 insult1 = ["a Lazy", "a Stupid", " an Insecure", "an Idiotic", "a Slimy", "a Jerky", "a Smelly", "a Pompous", "a Communist", "a Dicknose", "a Pie-eating", "a Racist", "an Elitist", "a White Trash", "a Drug-Loving", "a Butterface", "a Tone Deaf", "an Ugly", "a Creepy"]
 insult2 = ["Douche", "Ass", "Turd", "Rectum", "Butt", "Cock", "Shit", "Crotch", "Fascist", "Prick", "Jerk", "Taint", "Fuck", "Dick", "Boner", "Shart", "Nut", "Sphincter" ]
 insult3 = ["Pilot", "Canoe", "Captain", "Pirate", "Hammer", "Knob", "Box", "Jockey", "Nazi", "Waffle", "Goblin", "Blossum", "Biscuit", "Clown", "Socket", "Monster", "Hound", "Dragon", "Balloon"]
 compliment1 = ["a Gentle", "a Inviting", " an Obliging", "a Pleasant", "a Delightful", "a Considerate", "a Attractive", "a Helpful", "a Commendable", "a Courteous", "a Well-mannered", "a Ducky", "a Copacetic", "a Simpatico", "a Swell", "a Pleasurable", "a Peachy", "a Polite", "a Lovely"]
 compliment2 = ["Gracious", "Civil", "Kindly", "Warm", "Sociable", "Approachable", "Breezy", "Congenial", "Dandy", "Marvelous", "Elegant", "Alluring", "Classy", "Fascinating", "Cute", "Dazzling", "Sublime", "Splendid" ]
 compliment3 = ["Pilot", "Canoe", "Captain", "Pirate", "Hammer", "Knob", "Box", "Jockey", "Nazi", "Waffle", "Goblin", "Blossum", "Biscuit", "Clown", "Socket", "Monster", "Hound", "Dragon", "Balloon"]
+<<<<<<< HEAD
+ball = ['It is certain','It is decidedly so','Without a doubt','Yes, definitely','You may rely on it','As I see it, yes','Most likely','Outlook good','Yes','Signs point to yes','Reply hazy try again','Ask again later','Better not tell you now','Cannot predict now','Concentrate and ask again','Don\'t count on it','My reply is no','My sources say no','Outlook not so good','Very doubtful']
+help_msg = ('''\
+!help - Displays this message
+!4chan
+!8ball
+!acab
+!afaq
+!anarchism
+!ancap
+!ancom
+!antifa
+!bathroom
+!bakunin
+=======
 help_msg = ('''\
 !help - Displays this message
 !acab
 !anarchism
 !ancap
 !ancom
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !bestshit
 !bookchin
 !bordiga
 !brd
+<<<<<<< HEAD
+!bread
 !btfo
 !bubbles
+!chomsky
+=======
+!btfo
+!bubbles
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !coffee
 !coin - Flips a coin
 !compliment
@@ -31,6 +70,10 @@ help_msg = ('''\
 !durruti
 !encounter - Fight a random monster
 !ezln
+<<<<<<< HEAD
+!fascist
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !fresh
 !goldman
 !gulag
@@ -39,12 +82,20 @@ help_msg = ('''\
 !kitty
 !kronstadt
 !kropotkin
+<<<<<<< HEAD
+!leftcom
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !lenin
 !lenny
 !liberals
 !linux
 !makhno
 !marx
+<<<<<<< HEAD
+!memes
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !motivation
 !ohwell
 !outside
@@ -63,6 +114,10 @@ help_msg = ('''\
 !tankie
 !trotsky
 !trump
+<<<<<<< HEAD
+!usa
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 !vaporwave
 !vegan
 !changelog
@@ -125,6 +180,32 @@ def on_message(message):
     elif message.content.startswith('Voltairine, introduce yourself'):
         yield from client.send_message(message.channel, '```Hi everyone! I\'m Voltairine. Nice to meet you all```')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!4chan'):
+        yield from client.send_message(message.channel, '**ITS LITERALLY THE MOST TOXIC ASPECTS OF HUMANITY THROWN INTO A BLENDER AND PULSED INTO A SICKENING MASS OF SHIT, THATS BEEN SLOWLY FUCKING CREEPING INTO THE REAL WORLD AND JUST UGH 4CHAN IS KILLING THE WORLD**')
+
+    elif message.content.startswith('!8ball'):
+        j = random.randint(0,11)
+        yield from client.send_message(message.channel, ball[j])
+
+    elif message.content.startswith('!acab'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmPftuPUGLzTScSYJssoXSfmj9gDg8qe7czP13UgXCH3gC\nhttps://ipfs.pics/QmdtTG428q3CcDqx4kcEZ4687Vyrk1LxhQYYLqsHpSngMK')
+
+    elif message.content.startswith('!afaq'):
+        yield from client.send_message(message.channel, ':books: https://libcom.org/files/Iain%20McKay%20-%20Anarchist%20FAQ.pdf')
+
+    elif message.content.startswith('!anarchism'):
+        yield from client.send_message(message.channel, 'Anarchism is a social movement that seeks liberation from oppressive systems of control including but not limited to the state, capitalism, racism, sexism, speciesism, and religion. Anarchists advocate a self-managed, classless, stateless society without borders, bosses, or rulers where everyone takes collective responsibility for the health and prosperity of themselves and the environment.')
+
+    elif message.content.startswith('!antifa'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmQ6LAC9ZATpT2wCvMuvyU2jEWzTEEiirQ79KD4miMs97m https://ipfs.pics/QmNqvHSFm3XMSvP6uABUSixoTi1vACY75hDbQHdm6FUXKd')
+
+    elif message.content.startswith('!bathroom'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmPAd2gJxvn9CBbj5VgxztcdEwxhD77FpiCHjRAFGYqSbE')
+
+    elif message.content.startswith('!berkman'):
+        yield from client.send_message(message.channel, ':books: **The Bolshevik Myth (Diary 1920–22)**: https://theanarchistlibrary.org/library/alexander-berkman-the-bolshevik-myth-diary-1920-22 \n:books: **Bolsheviks Shooting Anarchists** with Emma Goldman: https://theanarchistlibrary.org/library/emma-goldman-alexander-berkman-bolsheviks-shooting-anarchists \n:books: **The Russian Tragedy (A Review and An Outlook)**: https://theanarchistlibrary.org/library/alexander-berkman-the-russian-tragedy-a-review-and-an-outlook \n:books: **What Is Communist Anarchism?**: https://theanarchistlibrary.org/library/alexander-berkman-what-is-communist-anarchism ')
+=======
     elif message.content.startswith('!acab'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmPftuPUGLzTScSYJssoXSfmj9gDg8qe7czP13UgXCH3gC\nhttps://ipfs.pics/QmdtTG428q3CcDqx4kcEZ4687Vyrk1LxhQYYLqsHpSngMK')
 
@@ -133,6 +214,7 @@ def on_message(message):
 
     elif message.content.startswith('!berkman'):
         yield from client.send_message(message.channel, ':books: **The Bolshevik Myth (Diary 1920–22)**: https://theanarchistlibrary.org/library/alexander-berkman-the-bolshevik-myth-diary-1920-22 \n**Bolsheviks Shooting Anarchists** with Emma Goldman: https://theanarchistlibrary.org/library/emma-goldman-alexander-berkman-bolsheviks-shooting-anarchists \n**The Russian Tragedy (A Review and An Outlook)**: https://theanarchistlibrary.org/library/alexander-berkman-the-russian-tragedy-a-review-and-an-outlook \n**What Is Communist Anarchism?**: https://theanarchistlibrary.org/library/alexander-berkman-what-is-communist-anarchism ')
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 
     elif message.content.startswith('!ancap'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/ipfs/QmUq6F6NbYznU9y65Pc17gG8rSBx9w42224FneG3EspgXX \n https://ipfs.pics/QmY6jNpD4FGewhC6dJVKwQYrCgEPCxkBCLuyJWvu1bZXbF')
@@ -140,11 +222,21 @@ def on_message(message):
     elif message.content.startswith('!ancom'):
         yield from client.send_message(message.channel, ':ancom: A theory of anarchism which advocates the abolition of the state, capitalism, wage labour, and private property (while retaining respect for personal property), and in favour of common ownership of the means of production, direct democracy, and a horizontal network of voluntary associations and workers\' councils with production and consumption based on the guiding principle: "from each according to his ability, to each according to his need"\n:books: **Recommended Reading**:books: \n- **Anarchist communism - an introduction** https://libcom.org/thought/anarchist-communism-an-introduction\n- **A Short Introduction to Anarchist Communism**  https://afed.org.uk/short-intro/')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!bakunin'):
+        yield from client.send_message(message.channel, ':books: **Statism and Anarchy**: https://theanarchistlibrary.org/library/michail-bakunin-statism-and-anarchy\n:books: **God and the State**: https://theanarchistlibrary.org/library/michail-bakunin-god-and-the-state\n:books: **Marxism, Freedom and the State**: https://theanarchistlibrary.org/library/michail-bakunin-marxism-freedom-and-the-state\n:books: **The Capitalist System**: https://theanarchistlibrary.org/library/michail-bakunin-the-capitalist-system')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
     elif message.content.startswith('!bestshit'):
         yield from client.send_message(message.channel, ':books: CONQUEST OF BREAD MOTHERFUCKER\nhttps://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread \nABC OF ANARCHISM IF YOU LIKE IT IN SIMPLE ENGLISH! \nhttps://libcom.org/library/abc-anarchism-alexander-berkman \nCOMMUNIST MANIFESTO FOR THE CLASSIC SHIT :ok_hand: :ok_hand: :ok_hand:  \nhttps://www.marxists.org/archive/marx/works/1848/communist-manifesto/')
 
     elif message.content.startswith('!bookchin'):
+<<<<<<< HEAD
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmWbWyHkq41Kk6BUzwHtBsu1vjahFLQe82kPakhyobE7DG\n:books: **Social Anarchism or Lifestyle Anarchism**: https://theanarchistlibrary.org/library/murray-bookchin-social-anarchism-or-lifestyle-anarchism-an-unbridgeable-chasm \n:books: **The Ecology of Freedom**: https://we.riseup.net/goatgooseberry/murray-bookchin-the-ecology-of-freedom+375117 \n:books: **Post-Scarcity Anarchism**: https://we.riseup.net/goatgooseberry/murray-bookchin-post-scarcity-anarchism+375119')
+=======
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmWbWyHkq41Kk6BUzwHtBsu1vjahFLQe82kPakhyobE7DG')
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 
     elif message.content.startswith('!books'):
         yield from client.send_message(message.channel, ':books: :books: \n* **Peter Marshall - Demanding the Impossible: A History of Anarchism**\n* **Clifford Harper - Anarchy: graphic guide** \n* **Peter Kropotkin - Conquest of Bread**\n* Peter Kropotkin - Mutual Aid\n* Alexander Berkman - The ABC of anarchism\n* Peter Gelderloos - Anarchy Works\n* Emma Goldman - Anarchism and Other Essays\n* Oscar Wilde - The Soul of Man Under Socialism\n* Marx/Engels - Manifesto of the Communist Party\n* **Ursula Le Guin - The Dispossessed**\n* Daniel Guérin - Anarchism: From Theory to Practice\n* Comité Invisible (The Invisible Committee) - The Coming Insurrection\n* Bob Black - The Abolition of Work\n* Karl Marx - Capital\n* Max Stirner - The Unique and His Property\n* Daniel Guerin - Anarchism: Theory and Practice\n* Colin Ward - Anarchism: A Short Introduction\n* Benjamin R. Tucker - Instead of a Book\n* Alexander Berkman - What is Anarchism?\n* Ken Knabb - The Joy of Revolution\n* **Crimethinc - Work**\n* Crimethinc - Days of War, Nights of Love\n* **Daniel Guerin - No Gods, No Masters**\n* The Organizational Platform of the General Union of Anarchists\n* Peter Arshinov - History of the Makhnovist Movement\n* **Prole.info - The Housing Monster**\n* **Prole.info - Abolish Restaurants**\n* Peter Gelderloos - How Nonviolence Protects the State\n* Mikhail Bakunin - God and the State\n* Mikhail Bakunin - Revolutionary Catechism\n* **David Graeber - Debt: The First 5000 Years**\n* Voltairine de Cleyre - Crime and Punishment')
@@ -155,14 +247,28 @@ def on_message(message):
     elif message.content.startswith('!brd'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmbuSBhqaUkubCHvijAtfh4D9VPKUWci24cECJK19KzjXv')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!bread'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmSPsNeYRrPSA7v3dSJoKTSwJGPLcnPhUAcAkxFaghj6xz')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
     elif message.content.startswith('!btfo'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmSYFBYnwX4XVkaCyn1jFHZSGS3uYEhEdbaatfM6PoaiXS')
 
     elif message.content.startswith('!bubbles'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmQdekAPo4tSU99dSEHgRppTemBaBGFVc1ggbTcwaHADim')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!chomsky'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/Qmb9EUw9Sj7v11QLn3qDkPCcvPMCtm3qqG6usjSK4YYyzo\n :books: **Chomsky on Anarchism**: https://we.riseup.net/goatgooseberry/noam-chomsky-chomsky-on-anarchism-ak+374994\n:books: **Deterring Democracy**: https://we.riseup.net/goatgooseberry/noam-chomsky-deterring-democracy-vintage+374996\n:books: **Manufacturing Consent**: https://we.riseup.net/goatgooseberry/edward-s-herman-noam-chomsky+374993\n:books: **Failed States**: https://we.riseup.net/goatgooseberry/noam-chomsky-failed-states-the-abuse-of+374995')
+
+    elif message.content.startswith('!coffee'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmZawVFHCAnCFk3n4RLRDK9Dw9NjC3uRk9S1LokHi8HFYm')
+=======
     elif message.content.startswith('!coffee'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/Qmf55P9UNCQNQxPceYxQ3moAtHYiLbEHgoRD8X4VGt8Axz')
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 
     elif message.content.startswith('!communism'):
         yield from client.send_message(message.channel, 'A spectre:ghost::ghost: is haunting:ghost: :earth_africa:Europe:earth_africa: — the spectre :ghost:of communism☭☭☭☭. All the :muscle::muscle:powers of old Europe:muscle: have entered into a :pray: holy alliance :pray:to exorcise this spectre:ghost::ghost::ghost:: Pope :poop::poop:and Tsar:poop::thumbsdown::thumbsdown:, Metternich:poop: and Guizot:poop::poop::poop:, French Radicals:flag_fr::flag_fr::thumbsdown::thumbsdown::thumbsdown: and German police-spies:put_litter_in_its_place::put_litter_in_its_place::put_litter_in_its_place::put_litter_in_its_place:. Where is the:tada: party:tada::tada: in opposition that has not been :crying_cat_face:decried:crying_cat_face::crying_cat_face: as communistic☭☭☭☭ by its :frowning::frowning:opponents in power:frowning:? Where is the opposition that has not hurled back the branding:fire::fire: reproach:fire::fire::fire::fire: of ☭☭☭☭communism☭☭, against the more advanced:confetti_ball: opposition parties:confetti_ball::confetti_ball::confetti_ball:, as well as against its :no_good::no_good::no_good::no_good:reactionary adversaries:no_good::no_good:? :clock2:Two things:clock2: result from this fact:closed_book::closed_book:: I. ☭☭☭☭Communism☭☭ is already acknowledged by all :muscle:European powers:muscle::muscle: to be itself a :muscle::muscle:☭power☭:muscle:. II. It is :clock12::bangbang:️:clock12:high time:clock12::clock12::clock12::exclamation: that ☭☭Communists☭☭☭ should openly, in the :stuck_out_tongue::stuck_out_tongue::stuck_out_tongue:face:stuck_out_tongue::stuck_out_tongue: of the :earth_africa:whole:earth_africa: world:earth_africa::earth_africa::earth_africa:, publish:closed_book::closed_book: their:closed_book: views:closed_book::closed_book::closed_book:, their :dart:aims:dart::dart:, their tendencies☭☭, and meet this :baby_bottle:nursery:baby_bottle::baby_bottle: tale:baby_bottle::closed_book::baby_bottle: of the :ghost:Spectre:ghost: of Communism:ghost::ghost: ☭ :ghost:☭ with a manifesto:closed_book::closed_book: of the party:closed_book::confetti_ball:☭ itself.')
@@ -177,11 +283,21 @@ def on_message(message):
     elif message.content.startswith('!ezln'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmQHszGgh6dPWTTTVffwqPsJ8rwZYkfxPFRWa2TyLwpuua')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!fascist'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmbkAzJKBN5E6C9nn2Lj4udSEu8ZjxE1PoshGuLxnAqf5z')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
     elif message.content.startswith('!fresh'):
         yield from client.send_message(message.channel, '```Now, this is a story all about how \nMy life got flipped-turned upside down \nAnd I\'d like to take a minute \n Just sit right there \nI\'ll tell you how I became the prince of a town called Bel-Air```')
 
     elif message.content.startswith('!goldman'):
+<<<<<<< HEAD
+        yield from client.send_message(message.channel, ':books: **Anarchism and Other Essays**: https://theanarchistlibrary.org/library/emma-goldman-anarchism-and-other-essays\n:books: **My Disillusionment in Russia** with Emma Goldman: https://theanarchistlibrary.org/library/emma-goldman-my-disillusionment-in-russia\n:books: **My Further Disillusionment in Russia**: https://theanarchistlibrary.org/library/emma-goldman-my-further-disillusionment-in-russia\n:books: **Voltairine De Cleyre**: https://theanarchistlibrary.org/library/emma-goldman-voltairine-de-cleyre')
+=======
         yield from client.send_message(message.channel, ':books: **Anarchism and Other Essays**: https://theanarchistlibrary.org/library/emma-goldman-anarchism-and-other-essays\n**My Disillusionment in Russia** with Emma Goldman: https://theanarchistlibrary.org/library/emma-goldman-my-disillusionment-in-russia\n**My Further Disillusionment in Russia**: https://theanarchistlibrary.org/library/emma-goldman-my-further-disillusionment-in-russia\n**Voltairine De Cleyre**: https://theanarchistlibrary.org/library/emma-goldman-voltairine-de-cleyre')
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 
     elif message.content.startswith('!gulag'):
         yield from client.send_message(message.channel, 'https://libcom.org/history/gay-gulag')
@@ -205,7 +321,14 @@ def on_message(message):
         yield from client.send_message(message.channel, 'http://www.veoh.com/watch/v18771330YDwTzP3g')
 
     elif message.content.startswith('!kropotkin'):
+<<<<<<< HEAD
+        yield from client.send_message(message.channel, ':books: **The Conquest of Bread **: https://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread\n:books: **The Commune of Paris **: https://theanarchistlibrary.org/library/petr-kropotkin-the-commune-of-paris\n:books: **Mutual Aid: A Factor of Evolution **: https://theanarchistlibrary.org/library/petr-kropotkin-mutual-aid-a-factor-of-evolution\n:books: **Communism and Anarchy**: https://theanarchistlibrary.org/library/petr-kropotkin-communism-and-anarchy')
+
+    elif message.content.startswith('!leftcom'):
+        yield from client.send_message(message.channel, 'https://ipfs.pics/QmUNcSYYdm3jqFDhNQ86pabYcjpgfKPBRrRejdZEYpHhZA')
+=======
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmXMwSkQz97PSg6ivs6cAtjd39t73dXgR2CN1TacBYYgMZ')
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 
     elif message.content.startswith('!lenin'):
         yield from client.send_message(message.channel, 'a counter-revolutionary class traitor, who is responsible for the creation of the state-capitalist dictatorship known as the USSR. Along with other state-capitalist dictators such as Stalin and Mao, Lenin has tarnished the reputation of communism better than any capitalist or fascist ever could. ')
@@ -225,6 +348,12 @@ def on_message(message):
     elif message.content.startswith('!marx'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmYRwrEwnZccbZHBEzLXijs2a6swsvbUfoJcVrn3eP6H2S')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!memes'):
+        yield from client.send_message(message.channel, 'https://we.riseup.net/goatgooseberry/meme-commands')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
     elif message.content.startswith('!motivation'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmTf3mPZUH27ArzRwdjnAS7Auu5nTTbXAZ3MTc5YbYuJsH')
 
@@ -286,6 +415,12 @@ def on_message(message):
     elif message.content.startswith('!trump'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmZQ2W3JuVpaZFY7q1vdMFLa6rHdgNJWjwKibqow3ur8vX\nhttps://ipfs.pics/QmdVbUVhoiJpHLhke1r8uDogSrPnbFfwSLe45vwXJ9DiSw')
 
+<<<<<<< HEAD
+    elif message.content.startswith('!usa'):
+        yield from client.send_message(message.channel, '"The US has done a numerous amount of unspeakable crimes against humanity"')
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
     elif message.content.startswith('!vaporwave'):
         yield from client.send_message(message.channel, 'https://ipfs.pics/QmWDodJS48z5JUGLTNVwMKCDQbRu6W5rytUbNv65JuxMug')
 
@@ -356,7 +491,11 @@ def on_message(message):
     elif message.content.startswith('!encounter'):
         k = random.randint(0,3)
         enemy = ['ancap', 'tankie', 'fascist', 'liberal', 'trump', 'cop']
+<<<<<<< HEAD
+        enemy_pic = ['https://ipfs.pics/ipfs/QmUq6F6NbYznU9y65Pc17gG8rSBx9w42224FneG3EspgXX','https://ipfs.pics/QmRCh7AFfyL3ZSXCbF6ax6NjkrMwCCqgar8RoajCYp6Zot','https://ipfs.pics/QmSrPJqzc8dzni8EwvGMg3GJuNLrL4pwgfRNgeM68ZwF1s','https://ipfs.pics/QmTD8o6ZZ4Ppd4sbTMjY9Cf7SXmt7uTZdwuHwojyTLNtcs','https://ipfs.pics/QmdLNzYbiSfkEKp2mDotu1yCRabi43iopkFxdJBfaKJW93','https://ipfs.pics/QmcdWyBSp78n65VhxrFHgvLhjvfkA7FyKtTtwAnFx3Rszp']
+=======
         enemy_pic = ['https://ipfs.pics/ipfs/QmUq6F6NbYznU9y65Pc17gG8rSBx9w42224FneG3EspgXX','https://ipfs.pics/QmRCh7AFfyL3ZSXCbF6ax6NjkrMwCCqgar8RoajCYp6Zot','https://ipfs.pics/QmSrPJqzc8dzni8EwvGMg3GJuNLrL4pwgfRNgeM68ZwF1s','https://ipfs.pics/QmTD8o6ZZ4Ppd4sbTMjY9Cf7SXmt7uTZdwuHwojyTLNtcs,https://ipfs.pics/QmdLNzYbiSfkEKp2mDotu1yCRabi43iopkFxdJBfaKJW93,https://ipfs.pics/QmcdWyBSp78n65VhxrFHgvLhjvfkA7FyKtTtwAnFx3Rszp']
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
         enemy_hp = [15,15, 17, 10, 15,20]
         enemy_hp_l = int(enemy_hp[k])
         player_hp = 20
@@ -420,4 +559,8 @@ def on_message(message):
 #       yield from User.mention(message.author)
 #        yield from client.send_message(message.channel, 'Rolled a ' + random.randint(1,100))
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0e37461299ca20fd78e033ec5b4e039da5454d1f
 client.run('token')
