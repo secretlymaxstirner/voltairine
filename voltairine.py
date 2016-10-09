@@ -206,11 +206,11 @@ def on_message(message):
         return
 
     elif message.content.startswith('!cowsay'):
-        cowsaid = build_box(message.content, 40) + build_thinkcow()
+        cowsaid = build_box(message.content, 40) + build_saycow()
         yield from client.send_message(message.channel, '```txt\n{0}```'.format(cowsaid))
 
     elif message.content.startswith('!cowthink'):
-        cowsaid = build_box(message.content, 40) + build_saycow()
+        cowsaid = build_box(message.content, 40) + build_thinkcow()
         yield from client.send_message(message.channel, '```txt\n{0}```'.format(cowsaid))
 
     elif message.content.startswith('!help'):
