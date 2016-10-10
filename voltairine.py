@@ -1,9 +1,10 @@
-import discord
-import asyncio
-import random
 import argparse
+import random
 import subprocess
+import textwrap
 
+import asyncio
+import discord
 
 client = discord.Client()
 
@@ -142,12 +143,77 @@ def on_message(message):
     if message.content.startswith(''):
 """
 
+def build_saycow():
+    return """
+     \   ^__^
+      \  (oo)\_______
+         (__)\       )\/\\
+             ||----w |
+             ||     ||
+    """
+
+def build_thinkcow():
+    return """
+     o   ^__^
+      o  (oo)\_______
+         (__)\       )\/\\
+             ||----w |
+             ||     ||
+    """
+
+def build_box(body, length=40):
+    bubble = []
+
+    lines = normalize_text(body, length)
+
+    bordersize = len(lines[0])
+
+    bubble.append("  "  + "_" * bordersize)
+
+    for index, line in enumerate(lines):
+        border = get_border(lines, index)
+
+        bubble.append("%s %s %s" % (border[0], line, border[1]))
+
+    bubble.append("  " + "-" * bordersize)
+
+    return "\n".join(bubble)
+
+def normalize_text(body, length):
+    lines  = textwrap.wrap(body, length)
+    maxlen = len(max(lines, key=len))
+    return [ line.ljust(maxlen) for line in lines ]
+
+def get_border(lines, index):
+    if len(lines) < 2:
+        return [ "<", ">" ]
+
+    elif index == 0:
+        return [ "/", "\\" ]
+
+    elif index == len(lines) - 1:
+        return [ "\\", "/" ]
+
+    else:
+        return [ "|", "|" ]
+
+
 @client.event
 @asyncio.coroutine
 def on_message(message):
 
     if message.author == client.user:
         return
+
+    elif message.content.startswith('!cowsay'):
+        body = " ".join(message.content.split()[1:])
+        cowsaid = build_box(body, 40) + build_saycow()
+        yield from client.send_message(message.channel, '```txt\n{0}```'.format(cowsaid))
+
+    elif message.content.startswith('!cowthink'):
+        body = " ".join(message.content.split()[1:])
+        cowsaid = build_box(body, 40) + build_thinkcow()
+        yield from client.send_message(message.channel, '```txt\n{0}```'.format(cowsaid))
 
     elif message.content.startswith('!help'):
         yield from client.send_message(message.channel, help_msg)
