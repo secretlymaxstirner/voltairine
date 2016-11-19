@@ -357,7 +357,7 @@ def on_message(message):
         yield from client.send_message(message.channel, ':books: **The Conquest of Bread **: https://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread\n:books: **The Commune of Paris **: https://theanarchistlibrary.org/library/petr-kropotkin-the-commune-of-paris\n:books: **Mutual Aid: A Factor of Evolution **: https://theanarchistlibrary.org/library/petr-kropotkin-mutual-aid-a-factor-of-evolution\n:books: **Communism and Anarchy**: https://theanarchistlibrary.org/library/petr-kropotkin-communism-and-anarchy')
 
     elif message.content.startswith('!leftcom'):
-        yield from client.send_message(message.channel, 'https://ipfs.pics/QmUNcSYYdm3jqFDhNQ86pabYcjpgfKPBRrRejdZEYpHhZA')
+        yield from client.send_message(message.channel, 'http://i.imgur.com/xUXuiUa.png')
 
     elif message.content.startswith('!lenin'):
         yield from client.send_message(message.channel, 'a counter-revolutionary class traitor, who is responsible for the creation of the state-capitalist dictatorship known as the USSR. Along with other state-capitalist dictators such as Stalin and Mao, Lenin has tarnished the reputation of communism better than any capitalist or fascist ever could. ')
